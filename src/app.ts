@@ -4,6 +4,7 @@ import express, { NextFunction, Request, Response } from 'express';
 import { AppError } from './errors/AppError';
 import { profileRoutes } from './routes/profile.routes';
 import cors from 'cors';
+import { pokemonRoutes } from './routes/pokemon.routes';
 
 const app = express();
 
@@ -12,6 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use(profileRoutes);
+app.use(pokemonRoutes);
 
 app.use(
   (

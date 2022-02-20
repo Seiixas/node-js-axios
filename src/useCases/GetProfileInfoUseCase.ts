@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { NotFoundException } from '../errors/NotFoundException';
+import { IPokedex } from '../interfaces/IPokedex';
 import { IProfileInfo } from '../interfaces/IProfileInfo';
 import { IRepositoryInfo } from '../interfaces/IRepositoryInfo';
 
