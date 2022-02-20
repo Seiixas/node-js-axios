@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { NotFoundException } from '../errors/NotFoundException';
+import { UnauthorizedException } from '../errors/UnauthorizedException';
 import { IPokedex } from '../interfaces/IPokedex';
 
 class GetPokemonInfoUseCase {
@@ -7,7 +8,7 @@ class GetPokemonInfoUseCase {
     try {
       const requestPokemon = await axios({
         method: 'get',
-        url: `https://pokeapi.co/api/v2/pokemon/charmander`
+        url: `https://pokeapi.co/api/v2/pokemon/${name}`
       });
 
       const pokemonInfo: IPokedex[] = [];
@@ -21,7 +22,7 @@ class GetPokemonInfoUseCase {
 
       return pokemonInfo;
     } catch (err) {
-      throw new NotFoundException;
+      throw new UnauthorizedException;
     }
 
   }

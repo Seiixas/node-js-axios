@@ -8,3 +8,6 @@ Para rodar o servidor: `yarn dev:run`
 
 `/users/:id`: Method GET
 Retorna os dados de um repositório existente do Github
+
+`/pokemon/:name`: Method GET
+Retorna as habilidades de um pokemon
